@@ -7,7 +7,7 @@ class User {
     }
 }
 
-// var u1 = new User("testname", "testsurname", "testcolor");
+// var u1 = new User("testname", "testsurname", "testcolor", "");
 
 var u1 = new User();
 
@@ -25,10 +25,10 @@ u1.favColor = prompt("what's your favourite color?");
 
 // password
 
-u1.pw = String(`${u1.name}${u1.surname}${u1.favColor}23`);
+u1.pw = u1.name + u1.surname + u1.favColor + "23";
 
-alert(`ur ai generated password is ${pw}`);
+alert(`ur ai generated password is ${u1.name}${u1.surname}${u1.favColor}23`);
 
-console.log(u1.name + "  " + u1.surname + "  " + u1.favColor + "  " + "23");
+console.log(u1.name + u1.surname + u1.favColor + "23");
 
-document.getElementById('user').innerHTML = `${u1.name}, ${u1.surname}, ${u1.favColor} 23 `;
+document.getElementById('user').innerHTML = `your ai generated password is: ${u1.pw}`;
